@@ -36,7 +36,7 @@ function Filter() {
           </select>
         </div>
         <div className="item">
-          <label htmlFor="minPrice">Mi Price</label>
+          <label htmlFor="minPrice">Min Price</label>
           <input type="text" id="minPrice" name="minPrice" placeholder="any" />
         </div>
         <div className="item">

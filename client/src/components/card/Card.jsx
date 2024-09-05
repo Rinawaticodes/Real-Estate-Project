@@ -10,7 +10,7 @@ function Card({ item }) {
       </Link>
       <div className="textContainer">
         <h2 className="title">
-          <Link to={`/${item.id}`}>{item.id}</Link>
+          <Link to={`/${item.id}`}>{item.title}</Link>
         </h2>
         <p className="address">
           <img src="./pin.png" alt="" />
@@ -46,12 +46,12 @@ export default Card;
 
 Card.propTypes = {
   item: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    images: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
     title: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    bathroom: PropTypes.string.isRequired,
-    bedroom: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    bathroom: PropTypes.number.isRequired,
+    bedroom: PropTypes.number.isRequired,
   }).isRequired,
 };
