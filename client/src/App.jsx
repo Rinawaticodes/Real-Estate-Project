@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./routes/layout/Layout";
 import ListPage from "./routes/listPage/listPage";
 import Homepage from "./routes/homepage/HomePage";
-import SinglePage from "./routes/singlePage/SinglepAge";
+import SinglePage from "./routes/singlePage/SinglePage";
 
 function App() {
   const router = createBrowserRouter([
