@@ -50,6 +50,7 @@ const login = async (req, res) => {
     const token = jwt.sign(
       {
         id: user.id,
+        isAdmin:false,
       },
       process.env.JWT_SECRET_KEY,
       {
@@ -57,6 +58,7 @@ const login = async (req, res) => {
       }
     );
 
+    const { password: userPassword, ...userInfo } = user;
     //generate cookie token send to the user
     // res.setHeader("Set-Cookie", "test=" + "myValue").json("success");
     res
@@ -66,7 +68,7 @@ const login = async (req, res) => {
         maxAge: age,
       })
       .status(200)
-      .json({ message: "login succesful" });
+      .json({ userInfo });
   } catch (err) {
     console.log(first);
     res.status(500).json({ message: "Failed to login" });

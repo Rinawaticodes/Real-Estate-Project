@@ -125,27 +125,26 @@ nav {
     }
 
     .menu {
-      position: fixed;
-      top: 0;
-      right: -50%;
-      background-color: black;
-      color: white;
-      height: 100vh;
-      width: 50%;
-      transition: all 1s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-
+      display: none;
       &.active {
+        position: absolute;
+        top: 0;
         right: 0;
+        background-color: black;
+        color: white;
+        height: 100vh;
+        width: 50%;
+        transition: all 1s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
       }
 
       @include sm {
         a {
-          display: initial;
+          display: flex;
         }
       }
     }

@@ -27,7 +27,7 @@ Pin.propTypes = {
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    bedroom: PropTypes.number.isRequired,
+    bedroom: PropTypes.number,
     latitude: PropTypes.number,
     longitude: PropTypes.number,
   }).isRequired,
